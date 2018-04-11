@@ -1,6 +1,6 @@
 class ChangeTables < ActiveRecord::Migration
   def change
-    add_foreign_key :taxis, :rides
-    add_foreign_key :passengers, :rides
+    add_column :rides, :taxi_id
+    add_column :rides, :passenger_id
   end
 end
